@@ -34,23 +34,23 @@ Follow these steps to set up the project on your local machine:
    
 2. **Navigate to the Project Directory**
 
-  Change into the project directory:
+   Change into the project directory:
 
-  ```cd Software-Developer-Salaries-Prediction```
+   ```cd Software-Developer-Salaries-Prediction```
 
 3. **Install Dependencies**
 
-  Ensure you have Python and pip installed. Install the required Python libraries using:
+   Ensure you have Python and pip installed. Install the required Python libraries using:
 
-  ``` pip install -r requirements.txt ```
+   ``` pip install -r requirements.txt ```
 
 4. **Run the Application**
 
-  Start the Streamlit application using:
+   Start the Streamlit application using:
 
-``` streamlit run app.py ```
+   ``` streamlit run app.py ```
 
-This command will open the application in your default web browser.
+   This command will open the application in your default web browser.
 
 ## Project Structure
 
