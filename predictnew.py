@@ -16,7 +16,7 @@ encoded_svg_image = get_svg_image_as_base64("images/th2.svg")
 
 # Load the model and encoders
 model_filename = 'model/salary_prediction_model.pkl'
-encoder_filename = 'model/project/salary/encoders_and_skills.pkl'
+encoder_filename = 'model/encoders_and_skills.pkl'
 
 try:
     with open(model_filename, 'rb') as file:
