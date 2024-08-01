@@ -12,11 +12,11 @@ def get_svg_image_as_base64(file_path):
     return encoded_svg
 
 # Read and encode the local SVG image
-encoded_svg_image = get_svg_image_as_base64("th2.svg")
+encoded_svg_image = get_svg_image_as_base64("images/th2.svg")
 
 # Load the model and encoders
-model_filename = 'D:/project/salary/salary_prediction_model.pkl'
-encoder_filename = 'D:/project/salary/encoders_and_skills.pkl'
+model_filename = 'model/salary_prediction_model.pkl'
+encoder_filename = 'model/encoders_and_skills.pkl'
 
 try:
     with open(model_filename, 'rb') as file:
