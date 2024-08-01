@@ -206,8 +206,8 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # Display About Us section
-if st.session_state.show_about:
-    st.markdown("<h2 id='about' style='text-align:center;font-weight:bolder;background-color:#192533;color:white'>About Us</h2>", unsafe_allow_html=True)
+if st.session_state.show_section == 'about_us':
+    st.markdown("<h2 id='about-us' style='text-align:center;font-weight:bolder;background-color:#192533;color:white'>About Us</h2>", unsafe_allow_html=True)
     about_us_html = """
         <div style="display: flex; align-items: center; background-color:#192533; color:white; padding:20px;">
             <div style="flex: 1; padding: 20px;">
@@ -220,7 +220,7 @@ if st.session_state.show_about:
             </div>
         </div>
     """
-    st.markdown(about_us_html, unsafe_allow_html=True)
+    st.markdown(unsafe_allow_html=True)
 
 # Section for Salary Predictor inputs in a form with reduced width
 st.markdown("<h2 id='predictor' style='text-align:center;font-weight:bolder;background-color:#192533;color:white'>Salary Predictor</h2>", unsafe_allow_html=True)
