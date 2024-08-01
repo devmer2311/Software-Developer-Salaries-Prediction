@@ -12,11 +12,11 @@ def get_svg_image_as_base64(file_path):
     return encoded_svg
 
 # Read and encode the local SVG image
-encoded_svg_image = get_svg_image_as_base64("images/th2.svg")
+encoded_svg_image = get_svg_image_as_base64("th2.svg")
 
 # Load the model and encoders
-model_filename = 'model/salary_prediction_model.pkl'
-encoder_filename = 'model/encoders_and_skills.pkl'
+model_filename = 'D:/project/salary/salary_prediction_model.pkl'
+encoder_filename = 'D:/project/salary/encoders_and_skills.pkl'
 
 try:
     with open(model_filename, 'rb') as file:
@@ -265,22 +265,25 @@ if st.button('Predict Salary'):
 # List of developers with their images and names
 # List of developers with their images and names
 developers = [
-    {"name": "Dev Mer", "image_url": "https://tweakyourbiz.com/wp-content/uploads/2022/05/React-Native-App-Developer-India.jpg"},
-    {"name": "Sanket Prajapati", "image_url": "https://www.springboard.com/blog/wp-content/uploads/2021/03/how-to-become-a-financial-analyst.jpg"},
-    {"name": "Vivek Mali", "image_url": "https://tse4.mm.bing.net/th?id=OIP.VOT-9gDBRzUPC2DLIZJYnQAAAA&pid=Api&P=0&h=180"},
-    {"name": "Saloni Rana", "image_url": "https://thumbs.dreamstime.com/b/photo-minded-focused-lady-professional-developer-look-display-solve-problems-fix-mistake-operating-system-content-indoor-266212015.jpg"},
-    {"name": "Nivedita Parmar", "image_url": "https://wallpapercave.com/wp/wp5799138.jpg"},
+    {"name": "Dev Mer", "image_url": "https://integressinc.com/wp-content/uploads/2020/07/screen_2x-1.jpg", "linkedin": "https://www.linkedin.com/in/dev-mer/"},
+    {"name": "Sanket Prajapati", "image_url": "https://www.springboard.com/blog/wp-content/uploads/2021/03/how-to-become-a-financial-analyst.jpg", "linkedin": "https://www.linkedin.com/in/sanket-prajapati27/"},
+    {"name": "Vivek Mali", "image_url": "https://tse4.mm.bing.net/th?id=OIP.VOT-9gDBRzUPC2DLIZJYnQAAAA&pid=Api&P=0&h=180", "linkedin": "https://www.linkedin.com/in/vivek-mali0/"},
+    {"name": "Saloni Rana", "image_url": "https://thumbs.dreamstime.com/b/photo-minded-focused-lady-professional-developer-look-display-solve-problems-fix-mistake-operating-system-content-indoor-266212015.jpg", "linkedin": "https://www.linkedin.com/in/saloni-rana/"},
+    {"name": "Nivedita Parmar", "image_url": "https://wallpapercave.com/wp/wp5799138.jpg", "linkedin": "https://www.linkedin.com/in/niveditaparmar24/"}
 ]
 
-# Display all developers in a single row using Streamlit columns
-col1, col2, col3, col4, col5 = st.columns(5)
+# Create columns for each developer
+cols = st.columns(len(developers))
 
+# Display developer details in columns
 for idx, developer in enumerate(developers):
-    with col1 if idx == 0 else col2 if idx == 1 else col3 if idx == 2 else col4 if idx == 3 else col5:
+    with cols[idx]:
         st.markdown(f"""
             <div style="border: 2px solid #ccc; border-radius: 10px; padding: 10px; text-align: center; height: 190px;">
                 <img src="{developer['image_url']}" alt="{developer['name']}'s Image" style="width: 100px; height: 100px; border-radius: 50%; border: 2px solid black;">
-                <h3 style='text-align:center;font-size:22px'>{developer['name']}</h3>
+                <h3 style='text-align:center;font-size:22px'>
+                    <a href="{developer['linkedin']}" target="_blank" style="text-decoration: none; color: white;">{developer['name']}</a>
+                </h3>
             </div>
         """, unsafe_allow_html=True)
 
