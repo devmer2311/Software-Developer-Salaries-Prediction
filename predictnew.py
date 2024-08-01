@@ -194,7 +194,7 @@ st.markdown(f"""
     <div class="homepage">
         <h1 style="color:white;font-weight:bolder;font-size:49px">Predict<br> Software Developer Salaries <br>with Accuracy</h1>
         <p>Utilize machine learning to predict software developer salaries accurately with NexGenSalary.</p>
-        <button class="predict-salary-button" onclick="document.getElementById('salary-predictor').scrollIntoView({ behavior: 'smooth' })">Predict Salary</button>
+        <button class="predict-salary-button" onclick="document.getElementById('predictor').scrollIntoView({ behavior: 'smooth' })">Predict Salary</button>
         <div class="stars">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Star_empty.svg" alt="Star" class="star">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Star_empty.svg" alt="Star" class="star">
