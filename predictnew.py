@@ -264,7 +264,7 @@ developers = [
     {"name": "Dev Mer", "image_url": "https://tweakyourbiz.com/wp-content/uploads/2022/05/React-Native-App-Developer-India.jpg"},
     {"name": "Sanket Prajapati", "image_url": "https://www.springboard.com/blog/wp-content/uploads/2021/03/how-to-become-a-financial-analyst.jpg"},
     {"name": "Vivek Mali", "image_url": "https://tse4.mm.bing.net/th?id=OIP.VOT-9gDBRzUPC2DLIZJYnQAAAA&pid=Api&P=0&h=180"},
-    {"name": "Saloni Rana", "image_url": "https://static.economist.com/sites/default/files/images/print-edition/20230624_ima003.jpg"},
+    {"name": "Saloni Rana", "image_url": "https://thumbs.dreamstime.com/b/photo-minded-focused-lady-professional-developer-look-display-solve-problems-fix-mistake-operating-system-content-indoor-266212015.jpg"},
     {"name": "Nivedita Parmar", "image_url": "https://wallpapercave.com/wp/wp5799138.jpg"},
 ]
 
