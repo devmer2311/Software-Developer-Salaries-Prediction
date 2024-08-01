@@ -99,8 +99,8 @@ def get_user_input(user_age, user_edlevel, user_country, user_workexp, user_skil
     user_df = pd.DataFrame([user_features])
     return user_df
 
-if 'show_section' not in st.session_state:
-    st.session_state.show_section = 'home'
+if 'show_about' not in st.session_state:
+    st.session_state.show_about = True
 
 # Header with logo and navbar using HTML and CSS
 header_html = """
@@ -138,7 +138,7 @@ header_html = """
         <div class="navbar">
             <a href="#predict-software-developer-salaries-with-accuracy">Home</a>
             <a href="#about-us">About</a>
-            <a href="#predictor">Salary Predictor</a>
+            <a href="#salary-predictor">Salary Predictor</a>
             <a href="#contact-us">Contact</a>
         </div>
     </div>
@@ -161,7 +161,7 @@ st.markdown(f"""
         padding-left: 24px;
         color: white;
         font-size: 36px;
-        opacity: 0.9;
+        opacity: 100%;
     }}
     .stars {{
         display: flex;
@@ -176,8 +176,7 @@ st.markdown(f"""
     }}
     .predict-salary-button {{
         background-color: #003db5;
-        color: white;
-        padding: 10px 5px;
+        padding: 10px 20px;
         width: 150px; /* Set width of the button */
         border: none;
         border-radius: 5px;
@@ -186,15 +185,20 @@ st.markdown(f"""
         margin-bottom: 10px;
         transition: background-color 0.3s;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        text-decoration: none; /* Remove underline from link */
+        display: inline-block; /* Ensure it behaves like a button */
+        
     }}
     .predict-salary-button:hover {{
         background-color: #108eda;
+        text-decoration: none;
     }}
     </style>
     <div class="homepage">
         <h1 style="color:white;font-weight:bolder;font-size:49px">Predict<br> Software Developer Salaries <br>with Accuracy</h1>
         <p>Utilize machine learning to predict software developer salaries accurately with NexGenSalary.</p>
-        <button class="predict-salary-button" onclick="window.location.href='#predictor'">Predict Salary</button>
+        <a class="predict-salary-button" href="#salary-predictor" style="color: white; opacity:100%;"><b>Predict Now</b></a>
         <div class="stars">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Star_empty.svg" alt="Star" class="star">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Star_empty.svg" alt="Star" class="star">
@@ -206,8 +210,8 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 # Display About Us section
-if st.session_state.show_section == 'about_us':
-    st.markdown("<h2 id='about-us' style='text-align:center;font-weight:bolder;background-color:#192533;color:white'>About Us</h2>", unsafe_allow_html=True)
+if st.session_state.show_about:
+    st.markdown("<h2 id='about' style='text-align:center;font-weight:bolder;background-color:#192533;color:white'>About Us</h2>", unsafe_allow_html=True)
     about_us_html = """
         <div style="display: flex; align-items: center; background-color:#192533; color:white; padding:20px;">
             <div style="flex: 1; padding: 20px;">
@@ -220,7 +224,7 @@ if st.session_state.show_section == 'about_us':
             </div>
         </div>
     """
-    st.markdown(unsafe_allow_html=True)
+    st.markdown(about_us_html, unsafe_allow_html=True)
 
 # Section for Salary Predictor inputs in a form with reduced width
 st.markdown("<h2 id='predictor' style='text-align:center;font-weight:bolder;background-color:#192533;color:white'>Salary Predictor</h2>", unsafe_allow_html=True)
