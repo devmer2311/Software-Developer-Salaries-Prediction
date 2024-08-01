@@ -99,11 +99,8 @@ def get_user_input(user_age, user_edlevel, user_country, user_workexp, user_skil
     user_df = pd.DataFrame([user_features])
     return user_df
 
-if 'show_about' not in st.session_state:
-    st.session_state.show_about = False
-    
-if 'show_predictor' not in st.session_state:
-    st.session_state.show_predictor = False
+if 'show_section' not in st.session_state:
+    st.session_state.show_section = 'home'
 
 # Header with logo and navbar using HTML and CSS
 header_html = """
