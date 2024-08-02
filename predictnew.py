@@ -211,9 +211,9 @@ st.markdown(f"""
 
 # Display About Us section
 if st.session_state.show_about:
-    st.markdown("<h2 id='about' style='text-align:center;font-weight:bolder;background-color:#192533;color:white'>About Us</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 id='about' style='text-align:center;font-weight:bolder;color:white'>About Us</h2>", unsafe_allow_html=True)
     about_us_html = """
-        <div style="display: flex; align-items: center; background-color:#192533; color:white; padding:20px;">
+        <div style="display: flex; align-items: center;  color:white; padding:20px;">
             <div style="flex: 1; padding: 20px;">
                 Welcome to <b style='color:#108eda'>NexGenSalary Predictor</b>! We are dedicated to helping you estimate your salary based on various factors such as experience, education, and skills.
                 <br>Our project aims to use machine learning to accurately predict how much software developers should earn. We'll analyze things like their experience, where they work, 
@@ -227,7 +227,7 @@ if st.session_state.show_about:
     st.markdown(about_us_html, unsafe_allow_html=True)
 
 # Section for Salary Predictor inputs in a form with reduced width
-st.markdown("<h2 id='predictor' style='text-align:center;font-weight:bolder;background-color:#192533;color:white'>Salary Predictor</h2>", unsafe_allow_html=True)
+st.markdown("<h2 id='predictor' style='text-align:center;font-weight:bolder;color:white'>Salary Predictor</h2>", unsafe_allow_html=True)
 
 # Inputs for the user with optimization
 with st.spinner('Loading options...'):
@@ -262,6 +262,7 @@ if st.button('Predict Salary'):
         except Exception as e:
             st.error(f"An error occurred during prediction: {e}")
 
+st.markdown("<h2 id='contact-us' style='text-align:center;font-weight:bolder;color:white'>Our Developers</h2>", unsafe_allow_html=True)
 # List of developers with their images and names
 # List of developers with their images and names
 developers = [
@@ -276,6 +277,7 @@ developers = [
 cols = st.columns(len(developers))
 
 # Display developer details in columns
+
 for idx, developer in enumerate(developers):
     with cols[idx]:
         st.markdown(f"""
@@ -288,7 +290,7 @@ for idx, developer in enumerate(developers):
         """, unsafe_allow_html=True)
 
 # Display Contact section
-st.markdown("<h2 id='contact-us' style='text-align:center;font-weight:bolder;background-color:#192533;color:white'>Connect With Us</h2>", unsafe_allow_html=True)
+st.markdown("<h2 id='contact-us' style='text-align:center;font-weight:bolder;color:white'>Connect With Us</h2>", unsafe_allow_html=True)
 
 with st.container():
     st.markdown("""
