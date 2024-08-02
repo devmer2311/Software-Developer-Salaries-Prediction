@@ -343,7 +343,7 @@ footer_html = """
     }
     </style>
     <div class="footer">
-        Made with ❤️ by TenchTrendSetters<br> © 2024 NextGenSalary. All rights reserved.
+        Made with ❤️ by TechTrendSetters<br> © 2024 NextGenSalary. All rights reserved.
     </div>
 """
 st.markdown(footer_html, unsafe_allow_html=True)
