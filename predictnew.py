@@ -10,7 +10,7 @@ st.set_page_config(
     page_icon=":rocket:",
     layout="wide",
     initial_sidebar_state="expanded",
-    menu_items=None  
+    menu_items=None, 
     theme={
         "base": "dark",
     }
