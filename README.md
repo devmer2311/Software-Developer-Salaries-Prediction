@@ -81,5 +81,5 @@ Push Your Changes:
 
 ``` git push origin my-feature-branch ```
 
-Create a Pull Request: Go to the original repository and create a pull request from your branch.
+Create a Pull Request: Go to the original repository and create a pull request from your branch...
 
