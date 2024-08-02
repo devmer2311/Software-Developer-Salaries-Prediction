@@ -7,10 +7,13 @@ from typing import List
 
 st.set_page_config(
     page_title="NextGen Salary Predictor",
-    page_icon=":rocket:",  # You can use your own icon or leave it out
+    page_icon=":rocket:",
     layout="wide",
     initial_sidebar_state="expanded",
-    menu_items=None  # This hides the Streamlit menu
+    menu_items=None  
+    theme={
+        "base": "dark",
+    }
 )
 # Function to read and encode the SVG image
 def get_svg_image_as_base64(file_path):
